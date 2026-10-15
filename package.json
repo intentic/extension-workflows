@@ -1,0 +1,33 @@
+{
+    "name": "intentic-workflows",
+    "version": "1.0.0",
+    "description": "Workflows, designed graphs of agent sessions that each produce a declared output, and saved loop designs: design them, run them, watch the runs, and wire a release gate into CI",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "packageManager": "pnpm@12.10.1",
+    "scripts": {
+        "build": "vite build",
+        "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+        "test": "vitest run && node --test test/*.test.mjs",
+        "verify": "pnpm run build && pnpm run typecheck && pnpm run test"
+    },
+    "dependencies": {
+        "@intentic/base": "^1.337.0",
+        "@intentic/extension-api": "^1.337.0",
+        "@intentic/extension-ui": "^1.337.0",
+        "@intentic/sandbox-contract": "^1.337.0"
+    },
+    "devDependencies": {
+        "@intentic/extension-manifest": "^1.337.0",
+        "@tanstack/vue-query": "^5.101.4",
+        "@types/node": "^24.13.2",
+        "@vitejs/plugin-vue": "^6.0.8",
+        "jsdom": "^29.1.1",
+        "typescript": "^5.9.3",
+        "vite": "^8.2.0",
+        "vitest": "^4.1.10",
+        "vue": "^3.5.40",
+        "vue-tsc": "^3.3.9"
+    }
+}
